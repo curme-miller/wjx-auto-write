@@ -21,7 +21,7 @@ class WJX(object):
     
     def choose_single(self):
         for number in range(single_number):
-            time.sleep(1)
+            time.sleep(1)                    #加入延时主要是为了规避问卷星的验证
             elements = self.single[number].find_elements(By.CLASS_NAME,'jqradio')
             question_choice = [i for i in range(len(self.single_radio[number]))]
             selected_number = random.choices(question_choice, self.single_radio[number], k=1)[0]
@@ -34,7 +34,7 @@ class WJX(object):
 
     def choose_multiple(self):
         for number in range(self.multiple_number):
-                time.sleep(1)
+                time.sleep(1)                   #加入延时主要是为了规避问卷星的验证
                 elements = self.multiple[number].find_elements(By.CLASS_NAME,'jqcheck')
                 choose_number = random.randint(3,len(elements))
                 question_choice = [i for i in range(len(elements))]
@@ -59,10 +59,6 @@ class WJX(object):
 
 
 if __name__ == '__main__':
-    # question_radio = [
-    #     [0.6,0.4],
-    #     [0.1,0.6,0.3]
-    # ]
     question_radio = [
         [0.4,0.6],#q1
         [0.2,0.1,0.2,0.25,0.1,0.05,0.05,0.05],#q2
@@ -84,27 +80,30 @@ if __name__ == '__main__':
         [0.5,0.11,0.132,0.15,0.1,0.08],#q18
         [0.31,0.23,0.12,0.3,0.04] #q19
     ] #single:15      multiple:4
-    input_number = int(input('number:'))
+    print('请输入各类题目数量\n'+'格式：[单选题数目] [多选题数目] [填空题数目]')
+    url = input('请输入网址：')
+    input_number = int(input('需要几份:'))
+    
     single_number = int(input('single number:'))
     multiple_number = int(input('multiple number:'))
 
     for num in range(input_number):
         driver = webdriver.Chrome()
         driver.implicitly_wait(10)
-        driver.get('https://www.wjx.cn/vm/hkM2i8g.aspx')
+        driver.get(url)
         wjx = WJX(question_radio,input_number,single_number,multiple_number,driver)
         wjx.single_choice_question()
         wjx.choose_single()
         wjx.multiple_choice_question()
         wjx.choose_multiple()
-        time.sleep(1)
+        time.sleep(1)                     #加入延时主要是为了规避问卷星的验证
         wjx.submitdata()
-        time.sleep(2)
+        time.sleep(2)                     #加入延时主要是为了规避问卷星的验证
         wjx.change()
-        time.sleep(3)
+        time.sleep(3)                     #加入延时主要是为了规避问卷星的验证
         wjx.exit()
-        time.sleep(3)
+        time.sleep(3)                     #加入延时主要是为了规避问卷星的验证
         print('No.{}'.format(num+1))
 
-    print('Task is end!')
+    print('The task is end!')
     

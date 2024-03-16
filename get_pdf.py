@@ -1,8 +1,6 @@
 import pdfkit
  
-url = "https://www.wjx.cn/vm/hkM2i8g.aspx"
-
+url = input('请输入网址：')
+file_name = input('请输入pdf文件名：')
 pdfkit_options = {'encoding': 'UTF-8'}
-
-pdfkit.from_url(url,'./questionnaire.pdf',options=pdfkit_options)
-
+pdfkit.from_url(url, '{}.pdf'.format(file_name), options=pdfkit_options)
