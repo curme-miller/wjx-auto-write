@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import random,time
+import random,time,pretty_errors
 
 class WJX(object):
     def __init__(self,radio,input_number,single_number,multiple_number, web_driver):
