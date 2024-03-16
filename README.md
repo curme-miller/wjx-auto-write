@@ -1,4 +1,4 @@
-# 这是可以填写问卷调查的python web自动化代码，可以设置每个选项比例
+# 这是可以填写问卷调查的python web自动化代码，可以设置每个选项比例(需要稍微等待)
 ## I.文件说明
 ### wjx.py
 * 这是自动填写问卷星的python代码
@@ -7,14 +7,16 @@
     - [x] 单选题
     - [x] 多选题
     - [ ] 填空题
-> [!TIP]
-> 如果你想设置每个选项大约占的比例，那么请在与"wjx.py"同一个文件夹下添加一个Excel文件,详见"question_radio.xlsx文件; 如果不设置，就以大约平均的比例进行选择.
+* 需要设置每个选项大约占的比例，请在与"wjx.py"同一个文件夹下添加一个Excel文件,格式与"question_radio.xlsx文件一样
+> [!CAUTION]
+> 有且只能有一个Excel文件
+
 ### get_pdf.py
 * 这是获取网页版问卷调查的python代码
 
 ## II.使用的关键python库
 ```
-selenium, time, random, pretty_errors
+selenium, time, random, pretty_errors, pandas, glob, sys
 ```
 
 ## III.需要安装Chrome Driver
