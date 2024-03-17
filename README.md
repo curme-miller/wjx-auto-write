@@ -32,3 +32,6 @@ selenium, time, random, pretty_errors, pandas, glob, sys
 打开网址：
 > https://chromedriver.chromium.org/
 选择适合你Chrome版本的Driver,然后下载安装
+
+> **免责声明：**
+> 本代码只作为学习与参考之用，不得用作商业等其他用途.
