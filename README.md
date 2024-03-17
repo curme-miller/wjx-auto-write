@@ -11,6 +11,9 @@
 > [!CAUTION]
 > 有且只能有一个Excel文件,需要按照自己的问卷调查设置好Excel文件
 
+> [!TIP]
+>  可以在虚拟机上运行，这样就不影响电脑的使用了
+
 ### get_pdf.py
 * 这是获取网页版问卷调查的python代码
 
@@ -23,5 +26,3 @@ selenium, time, random, pretty_errors, pandas, glob, sys
 打开网址：
 > https://chromedriver.chromium.org/
 选择适合你Chrome版本的Driver,然后下载安装
-> [!TIP]
->  可以在虚拟机上运行，这样就不影响电脑的使用了
