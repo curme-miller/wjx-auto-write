@@ -56,11 +56,15 @@ class WJX(object):
     def exit(self):
         self.driver.close()
 if __name__ == '__main__':
-    url = input('请输入网址：')
-    all_questions_number = int(input('总共有几题：'))
-    input_number = int(input('需要几份:'))
+    url = input('请输入网址(http...)：')
+    all_questions_number = int(input('总共有几题(填数字)：'))
+    input_number = int(input('需要几份(填数字):'))
+    print('开始填写，耐心等待~')
+    chrome_options =webdriver.ChromeOptions()
+    chrome_options.add_argument('--headless=new')
+    chrome_options.add_argument('--disable-gpu')
     for num in range(input_number):
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(options=chrome_options)
         driver.implicitly_wait(10)
         driver.get(url)
         wjx = WJX(driver,all_questions_number)
@@ -73,6 +77,6 @@ if __name__ == '__main__':
         wjx.submitdata()
         time.sleep(2)
         wjx.exit()
-        print('No.{}'.format(num+1))
+        print('已填完第{}份'.format(num+1))
         time.sleep(2)
-    print('The task is end!')
+    print('填写完成！！！')
