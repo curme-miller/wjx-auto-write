@@ -30,7 +30,7 @@ selenium, time, random, pretty_errors, pandas, glob, sys
 
 ## III.需要安装Chrome Driver
 打开网址：
-> https://chromedriver.chromium.org/
+> [chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#canary)
 选择适合你Chrome版本的Driver,然后下载安装
 
 > **免责声明：**
