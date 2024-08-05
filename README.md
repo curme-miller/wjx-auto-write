@@ -32,6 +32,7 @@ selenium, time, random, pretty_errors, pandas, glob, sys
 打开网址：(选择适合你Chrome版本的Driver,然后下载安装)
 - 125以后的版本：[chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#canary)
 - 114以前的版本：[chromedriver](https://chromedriver.storage.googleapis.com/index.html)
+- [淘宝镜像下载](https://registry.npmmirror.com/binary.html?path=chrome-for-testing/)
 
 > **免责声明：**
 > 本代码只作为学习与参考之用，不得用作商业等其他用途.
