@@ -33,6 +33,7 @@ selenium, time, random, pretty_errors, pandas, glob, sys
 - 125以后的版本：[chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#canary)
 - 114以前的版本：[chromedriver](https://chromedriver.storage.googleapis.com/index.html)
 - [淘宝镜像下载](https://registry.npmmirror.com/binary.html?path=chrome-for-testing/)
+
 将下载的文件粘贴进chrome的根目录。
 
 > **免责声明：**
