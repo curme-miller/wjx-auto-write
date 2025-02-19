@@ -9,7 +9,7 @@ class WJX(object):
     def read_proportion(self):
         excel_files = glob.glob('./*.xlsx')
         if len(excel_files) != 1:
-            print('excel文件只能是1个 或 不是".xlsx"文件 或 python文件设置路径不对!!!')
+            print('excel文件只能是1个 或 不是".xlsx"文件 或 python文件执行路径不对!!!')
             sys.exit()
         excel = pd.read_excel(excel_files[0])
         self.question_pro = []
