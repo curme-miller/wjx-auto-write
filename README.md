@@ -27,6 +27,9 @@
 ```
 selenium, time, random, pretty_errors, pandas, glob, sys
 ```
+```
+pip install -r requirements.txt
+```
 
 ## III.需要安装Chrome Driver
 打开网址：(选择适合你Chrome版本的Driver,然后下载安装)
